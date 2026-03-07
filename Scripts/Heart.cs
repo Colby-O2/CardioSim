@@ -88,6 +88,8 @@ namespace ColbyO.CardioSim
         private float _prevRWaveTime;
         private float _k1, _k2, _k3, _k4;
 
+        private Coroutine _morphCoroutine;
+
         public float Quailty { get => _quality; set => _quality = Mathf.Clamp01(value); }
 
         public float EngineDt { get; private set; }
@@ -111,15 +113,13 @@ namespace ColbyO.CardioSim
         public float DiastolicBloodPressure { get; private set; }
         public float PulseTransitTime { get; private set; }
 
-        private Coroutine _morphCoroutine;
+        public bool IsArrested { get; private set; }
 
-        [Header("Arrest Settings")]
-        [SerializeField] private bool _isArrested = false;
-
+        [ContextMenu("TriggerCardiacArrest")]
         public void TriggerCardiacArrest()
         {
-            if (_isArrested) return;
-            _isArrested = true;
+            if (IsArrested) return;
+            IsArrested = true;
 
             HeartRate = 0;
             DiastolicBloodPressure = 0;
@@ -130,9 +130,10 @@ namespace ColbyO.CardioSim
             SetCondition("Asystole", bpm: 0);
         }
 
+        [ContextMenu("RestartHeart")]
         public void RestartHeart(string condition = "Normal", float bpm = 60.0f, float duration = 2f)
         {
-            _isArrested = false;
+            IsArrested = false;
 
             if (_as && _as.isPlaying)
             {
@@ -186,12 +187,12 @@ namespace ColbyO.CardioSim
 #endif
             UpdateSimulationQuaility();
 
-            if (_playAudio && _as && !_as.isPlaying && _flatlineClip && _isArrested)
+            if (_playAudio && _as && !_as.isPlaying && _flatlineClip && IsArrested)
             {
                 _as.clip = _flatlineClip;
                 _as.Play();
             }
-            else if (!_playAudio && _as && _as.isPlaying && _flatlineClip && _isArrested)
+            else if (!_playAudio && _as && _as.isPlaying && _flatlineClip && IsArrested)
             {
                 _as.Stop();
             }
@@ -329,7 +330,7 @@ namespace ColbyO.CardioSim
 
             if (!float.IsFinite(val)) return;
 
-            if (_isArrested)
+            if (IsArrested)
             {
                 _signal.IsPeakState = false;
                 SampleBuffer.Enqueue(val);
