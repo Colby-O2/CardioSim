@@ -72,3 +72,74 @@ void ECG_float(
     LeadMask = smoothstep(LeadLength, 0.0, 1.0 - headDst);
     GlowMask = pow(headGlow, 3.0);
 }
+
+void ECG_half(
+
+    UnityTexture2D VoltageTex,
+    UnitySamplerState Sampler,
+    half2 UV,
+    half UVScale,
+    half LineThickness,
+    half YScale,
+    half Presistence,
+    half LeadLength,
+    half HeadPosition,
+    half Resolution,
+    half AspectRatio,
+
+    out half Voltage,
+    out half LeadMask,
+    out half GlowMask
+)
+{
+    half dx = (1.0 / Resolution);
+    half sampleX = UV.x * UVScale;
+    half idx = sampleX * Resolution;
+
+    int center = int(floor(idx));
+
+    half2 P = half2(UV.x, (UV.y - 0.5) * AspectRatio);
+    half minDstSq = 1e9;
+
+    int searchRadius = (int) ceil((LineThickness + dx) * Resolution / UVScale);
+    searchRadius = min(searchRadius, 32);
+
+    [loop]
+    for (int o = -searchRadius; o <= searchRadius; o++)
+    {
+        int i0 = clamp(center + o, 0, int(Resolution) - 2);
+        int i1 = i0 + 1;
+
+        half u0 = i0 * dx;
+        half u1 = i1 * dx;
+
+        half v0 = YScale * SAMPLE_TEXTURE2D(VoltageTex, Sampler, half2(u0, 0)).r;
+        half v1 = YScale * SAMPLE_TEXTURE2D(VoltageTex, Sampler, half2(u1, 0)).r;
+
+        half2 A = half2(u0 / UVScale, v0 * AspectRatio);
+        half2 B = half2(u1 / UVScale, v1 * AspectRatio);
+
+        half2 PA = P - A;
+        half2 BA = B - A;
+        half h = saturate(dot(PA, BA) / (dot(BA, BA) + 1e-6));
+        half2 D = PA - BA * h;
+
+        minDstSq = min(minDstSq, dot(D, D));
+    }
+
+    half l = 1.0 - smoothstep(
+        0.0,
+        LineThickness * LineThickness,
+        minDstSq
+    );
+    
+    half headDst = frac(1.0 + UV.x - HeadPosition);
+    half fade = pow(headDst, Presistence);
+    
+    half distFromHead = sqrt((UV.x - HeadPosition) * (UV.x - HeadPosition) + (UV.y - 0.5) * (UV.y - 0.5));
+    half headGlow = saturate(1.0 - (distFromHead * 2.0));
+    
+    Voltage = fade * l;
+    LeadMask = smoothstep(LeadLength, 0.0, 1.0 - headDst);
+    GlowMask = pow(headGlow, 3.0);
+}
