@@ -130,7 +130,6 @@ namespace ColbyO.CardioSim
             SetCondition("Asystole", bpm: 0);
         }
 
-        [ContextMenu("RestartHeart")]
         public void RestartHeart(string condition = "Normal", float bpm = 60.0f, float duration = 2f)
         {
             IsArrested = false;
@@ -143,6 +142,12 @@ namespace ColbyO.CardioSim
             SetCondition(condition);
             SetTargetHeartRate(Mathf.Min(bpm, 40.0f));
             SetTargetHeartRate(bpm, duration);
+        }
+
+        [ContextMenu("RestartHeart")]
+        public void RestartHeart()
+        {
+            RestartHeart(condition: "Normal", bpm: 60.0f, duration: 2f);
         }
 
         private void Awake()
