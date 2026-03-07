@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81d83e5e5392ca141b6ceb8982a59243, type: 3}
+  m_Name: AtrialFibrillationECGWave
+  m_EditorClassIdentifier: 
+  id: -1
+  includeInDatabase: 1
+  profileName: AFib
+  PGain: 0.03
+  P_Minus_Amp: 0.7
+  P_Minus_Width: 0.12
+  P_Minus_Phase: -0.35714287
+  P_Plus_Amp: 0.9
+  P_Plus_Width: 0.13
+  P_Plus_Phase: -0.25
+  CGain: 0.03
+  Q_Amp: 0.6
+  Q_Width: 0.12
+  Q_Phase: -0.125
+  R_Amp: 18
+  R_Width: 0.1
+  R_Phase: 0
+  S_Amp: -0.1
+  S_Width: 0.05
+  S_Phase: -0.016666668
+  JGain: 0
+  J_Amp: 0
+  J_Width: 0.01
+  J_Phase: 0
+  TGain: 0.15
+  T_Minus_Amp: 0.62
+  T_Minus_Width: 0.15
+  T_Minus_Phase: 0.125
+  T_Plus_Amp: 0.55
+  T_Plus_Width: 0.17
+  T_Plus_Phase: 0.3181818
+  UGain: 0
+  U_Amp: 0
+  U_Width: 0.01
+  U_Phase: 0
+  PAmplitudes:
+  - 0.7
+  - 0.9
+  PWidths:
+  - 0.12
+  - 0.13
+  PPhases:
+  - -0.35714287
+  - -0.25
+  CAmplitudes:
+  - 0.6
+  - 18
+  - -0.1
+  CWidths:
+  - 0.12
+  - 0.1
+  - 0.05
+  CPhases:
+  - -0.125
+  - 0
+  - -0.016666668
+  TAmplitudes:
+  - 0.62
+  - 0.55
+  TWidths:
+  - 0.15
+  - 0.17
+  TPhases:
+  - 0.125
+  - 0.3181818
+  JAmplitudes:
+  - 0
+  JWidths:
+  - 0.01
+  JPhases:
+  - 0
+  UAmplitudes:
+  - 0
+  UWidths:
+  - 0.01
+  UPhases:
+  - 0

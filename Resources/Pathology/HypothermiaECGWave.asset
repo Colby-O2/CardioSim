@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81d83e5e5392ca141b6ceb8982a59243, type: 3}
+  m_Name: HypothermiaECGWave
+  m_EditorClassIdentifier: 
+  id: 3
+  includeInDatabase: 1
+  profileName: Hypothermia
+  PGain: 0.03
+  P_Minus_Amp: 0.7
+  P_Minus_Width: 0.2
+  P_Minus_Phase: -0.1875
+  P_Plus_Amp: 0.8
+  P_Plus_Width: 0.1
+  P_Plus_Phase: -0.1666667
+  CGain: 0.03
+  Q_Amp: -1
+  Q_Width: 0.1
+  Q_Phase: -0.03846154
+  R_Amp: 20
+  R_Width: 0.1
+  R_Phase: 0
+  S_Amp: -9.5
+  S_Width: 0.1
+  S_Phase: 0.03333334
+  JGain: 0.25
+  J_Amp: 1.5
+  J_Width: 0.08
+  J_Phase: 0.055
+  TGain: 0.15
+  T_Minus_Amp: 0.27
+  T_Minus_Width: 0.4
+  T_Minus_Phase: 0.2
+  T_Plus_Amp: 0.15
+  T_Plus_Width: 0.55
+  T_Plus_Phase: 0.2857143
+  UGain: 0.5
+  U_Amp: 0.05
+  U_Width: 0.3
+  U_Phase: 0.55
+  PAmplitudes:
+  - 0.7
+  - 0.8
+  PWidths:
+  - 0.2
+  - 0.1
+  PPhases:
+  - -0.1875
+  - -0.1666667
+  CAmplitudes:
+  - -1
+  - 20
+  - -9.5
+  CWidths:
+  - 0.1
+  - 0.1
+  - 0.1
+  CPhases:
+  - -0.03846154
+  - 0
+  - 0.03333334
+  TAmplitudes:
+  - 0.27
+  - 0.15
+  TWidths:
+  - 0.4
+  - 0.55
+  TPhases:
+  - 0.2
+  - 0.2857143
+  JAmplitudes:
+  - 1.5
+  JWidths:
+  - 0.08
+  JPhases:
+  - 0.055
+  UAmplitudes:
+  - 0.05
+  UWidths:
+  - 0.3
+  UPhases:
+  - 0.55

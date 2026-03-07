@@ -1,0 +1,14 @@
+{
+    "name": "ColbyO.CardioSim",
+    "rootNamespace": "ColbyO.CardioSim",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

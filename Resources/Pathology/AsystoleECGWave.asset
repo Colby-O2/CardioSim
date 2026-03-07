@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81d83e5e5392ca141b6ceb8982a59243, type: 3}
+  m_Name: AsystoleECGWave
+  m_EditorClassIdentifier: 
+  id: 0
+  includeInDatabase: 1
+  profileName: Asystole
+  PGain: 0
+  P_Minus_Amp: 0
+  P_Minus_Width: 0.01
+  P_Minus_Phase: 0
+  P_Plus_Amp: 0
+  P_Plus_Width: 0.01
+  P_Plus_Phase: 0
+  CGain: 0
+  Q_Amp: 0
+  Q_Width: 0.01
+  Q_Phase: 0
+  R_Amp: 0
+  R_Width: 0.01
+  R_Phase: 0
+  S_Amp: 0
+  S_Width: 0.01
+  S_Phase: 0
+  JGain: 0
+  J_Amp: 0
+  J_Width: 0.01
+  J_Phase: 0
+  TGain: 0
+  T_Minus_Amp: 0
+  T_Minus_Width: 0.01
+  T_Minus_Phase: 0
+  T_Plus_Amp: 0
+  T_Plus_Width: 0.01
+  T_Plus_Phase: 0
+  UGain: 0
+  U_Amp: 0
+  U_Width: 0.01
+  U_Phase: 0
+  PAmplitudes:
+  - 0
+  - 0
+  PWidths:
+  - 0.01
+  - 0.01
+  PPhases:
+  - 0
+  - 0
+  CAmplitudes:
+  - 0
+  - 0
+  - 0
+  CWidths:
+  - 0.01
+  - 0.01
+  - 0.01
+  CPhases:
+  - 0
+  - 0
+  - 0
+  TAmplitudes:
+  - 0
+  - 0
+  TWidths:
+  - 0.01
+  - 0.01
+  TPhases:
+  - 0
+  - 0
+  JAmplitudes:
+  - 0
+  JWidths:
+  - 0.01
+  JPhases:
+  - 0
+  UAmplitudes:
+  - 0
+  UWidths:
+  - 0.01
+  UPhases:
+  - 0

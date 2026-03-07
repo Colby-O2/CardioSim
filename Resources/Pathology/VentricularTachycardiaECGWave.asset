@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81d83e5e5392ca141b6ceb8982a59243, type: 3}
+  m_Name: VentricularTachycardiaECGWave
+  m_EditorClassIdentifier: 
+  id: 4
+  includeInDatabase: 1
+  profileName: VTech
+  PGain: 0.2
+  P_Minus_Amp: 1
+  P_Minus_Width: 0.2
+  P_Minus_Phase: 0.3846154
+  P_Plus_Amp: 1
+  P_Plus_Width: 0.1
+  P_Plus_Phase: -0.33333334
+  CGain: 0.2
+  Q_Amp: -2.2
+  Q_Width: 0.2
+  Q_Phase: -0.16666667
+  R_Amp: 1
+  R_Width: 0.3
+  R_Phase: 0
+  S_Amp: 3
+  S_Width: 0.4
+  S_Phase: 0.09090909
+  JGain: 0
+  J_Amp: 0
+  J_Width: 0.01
+  J_Phase: 0.055
+  TGain: 0.2
+  T_Minus_Amp: 5
+  T_Minus_Width: 0.5
+  T_Minus_Phase: 0.25
+  T_Plus_Amp: 3
+  T_Plus_Width: 0.45
+  T_Plus_Phase: 0.04347826
+  UGain: 0
+  U_Amp: 0
+  U_Width: 0.01
+  U_Phase: 0.55
+  PAmplitudes:
+  - 1
+  - 1
+  PWidths:
+  - 0.2
+  - 0.1
+  PPhases:
+  - 0.3846154
+  - -0.33333334
+  CAmplitudes:
+  - -2.2
+  - 1
+  - 3
+  CWidths:
+  - 0.2
+  - 0.3
+  - 0.4
+  CPhases:
+  - -0.16666667
+  - 0
+  - 0.09090909
+  TAmplitudes:
+  - 5
+  - 3
+  TWidths:
+  - 0.5
+  - 0.45
+  TPhases:
+  - 0.25
+  - 0.04347826
+  JAmplitudes:
+  - 0
+  JWidths:
+  - 0.01
+  JPhases:
+  - 0.055
+  UAmplitudes:
+  - 0
+  UWidths:
+  - 0.01
+  UPhases:
+  - 0.55
