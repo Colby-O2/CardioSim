@@ -29,8 +29,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6158803695350820813}
   - {fileID: 4685310378784994562}
+  - {fileID: 6158803695350820813}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7008907154863610220
@@ -97,7 +97,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 290b5f0df6f9a3a48990b63f149458d3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -302,10 +302,10 @@ MonoBehaviour:
   _yScale: 0.5
   _totalWidth: 2
   _leadLength: 5
-  _persistence: 1
+  _persistence: 0.9822
   _traceColor: {r: 0, g: 8, b: 0, a: 1}
   _flashColor: {r: 40, g: 40, b: 40, a: 10}
-  _lineWidth: 0.00087
+  _lineWidth: 0.00768
   _backgroundColor: {r: 0, g: 0, b: 0, a: 1}
   _enableGrid: 1
   _gridColor: {r: 0.015686275, g: 0.2627451, b: 0.015686275, a: 1}

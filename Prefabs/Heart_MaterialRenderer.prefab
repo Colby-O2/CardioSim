@@ -176,17 +176,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa189657e846cd6459e6e9166f455530, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _heart: {fileID: 2687240087919129761}
+  _heart: {fileID: 0}
   _displayMode: 2
   _maxSampleBuffer: 2048
   _secondsToDisplay: 2
   _yScale: 0.5
   _totalWidth: 2
   _leadLength: 5
-  _persistence: 1
-  _traceColor: {r: 0, g: 8, b: 0, a: 1}
-  _flashColor: {r: 40, g: 40, b: 40, a: 10}
-  _lineWidth: 0.00087
+  _persistence: 0.9881
+  _traceColor: {r: 0, g: 16, b: 0, a: 1}
+  _flashColor: {r: 95.87452, g: 95.87452, b: 95.87452, a: 10}
+  _lineWidth: 0.00095
   _backgroundColor: {r: 0, g: 0, b: 0, a: 1}
   _enableGrid: 1
   _gridColor: {r: 0.015686275, g: 0.2627451, b: 0.015686275, a: 1}
