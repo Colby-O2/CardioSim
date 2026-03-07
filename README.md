@@ -39,7 +39,7 @@ It generates physiologically realistic ECG waveforms that can be modified in rea
 
 ### Material Mode (GPU)
 
-GPU waveform rendering using a **signed distance field**.
+GPU waveform rendering using **signed distance fields**.
 
 - Apply the material to any surface
 - Automatically corrects waveform aspect ratio
