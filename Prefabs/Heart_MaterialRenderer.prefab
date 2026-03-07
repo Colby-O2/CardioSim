@@ -176,7 +176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa189657e846cd6459e6e9166f455530, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _heart: {fileID: 0}
+  _heart: {fileID: 2687240087919129761}
   _displayMode: 2
   _maxSampleBuffer: 2048
   _secondsToDisplay: 2
