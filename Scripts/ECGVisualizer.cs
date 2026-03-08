@@ -36,7 +36,6 @@ namespace ColbyO.CardioSim
         [SerializeField, HideInInspector] private float _gridLineThickness = 0.1f;
         [SerializeField, HideInInspector] private bool _enableGridFadeOut = true;
 
-
         [SerializeField, HideInInspector] private MeshRenderer _meshRenderer;
         [SerializeField, HideInInspector] private Material _ecgMaterial;
         [SerializeField, HideInInspector] private MonoBehaviour _rendererComponent;
@@ -44,6 +43,90 @@ namespace ColbyO.CardioSim
         private ECGMeshCreator _meshCreator = null;
         private ECGTextureCreator _textureCreator = null;
         private IECGRenderer CustomRenderer => _rendererComponent as IECGRenderer;
+
+        public float SecondsToDisplay
+        {
+            get => _secondsToDisplay;
+            set => _secondsToDisplay = value;
+        }
+
+        public float YScale
+        {
+            get => _yScale;
+            set => _yScale = value;
+        }
+
+        public float TotalWidth
+        {
+            get => _totalWidth;
+            set => _totalWidth = value;
+        }
+
+        public int LeadLength
+        {
+            get => _leadLength;
+            set => _leadLength = value;
+        }
+
+        public float Persistence
+        {
+            get => _persistence;
+            set => _persistence = value;
+        }
+
+        public Color TraceColor
+        {
+            get => _traceColor;
+            set => _traceColor = value;
+        }
+
+        public Color FlashColor
+        {
+            get => _flashColor;
+            set => _flashColor = value;
+        }
+
+        public float LineWidth
+        {
+            get => _lineWidth;
+            set => _lineWidth = value;
+        }
+
+        public Color BackgroundColor
+        {
+            get => _backgroundColor;
+            set => _backgroundColor = value;
+        }
+
+        public bool EnableGrid
+        {
+            get => _enableGrid;
+            set => _enableGrid = value;
+        }
+
+        public Color GridColor
+        {
+            get => _gridColor;
+            set => _gridColor = value;
+        }
+
+        public float GridSize
+        {
+            get => _gridSize;
+            set => _gridSize = value;
+        }
+
+        public float GridLineThickness
+        {
+            get => _gridLineThickness;
+            set => _gridLineThickness = value;
+        }
+
+        public bool EnableGridFadeOut
+        {
+            get => _enableGridFadeOut;
+            set => _enableGridFadeOut = value;
+        }
 
         private void FixedUpdate()
         {
