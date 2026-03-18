@@ -72,7 +72,6 @@ GPU waveform rendering using **signed distance fields**.
 
 ## License
 
-CardioSim is released under **The Unlicense**. You may freely use, modify, and redistribute this software, including in commercial projects.  
-Credit is not required, but **greatly appreciated**.
+CardioSim is released under **The Unlicense**. You may freely use, modify, and redistribute this software, including in commercial projects. Credit is not required, but **greatly appreciated**.
 
 ---
