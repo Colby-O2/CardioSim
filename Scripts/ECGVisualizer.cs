@@ -44,6 +44,12 @@ namespace ColbyO.CardioSim
         private ECGTextureCreator _textureCreator = null;
         private IECGRenderer CustomRenderer => _rendererComponent as IECGRenderer;
 
+        public Heart Heart
+        {
+            get => _heart;
+            set => _heart = value;
+        }
+
         public float SecondsToDisplay
         {
             get => _secondsToDisplay;
@@ -130,6 +136,7 @@ namespace ColbyO.CardioSim
 
         private void FixedUpdate()
         {
+            if (!_heart) return;
             Render(_heart.SampleBuffer);
         }
 
@@ -140,8 +147,6 @@ namespace ColbyO.CardioSim
 
         private void Render(Queue<float> buffer)
         {
-            if (!_heart) return;
-
             if (_displayMode == ECGDisplayMode.Material && _ecgMaterial != null)
             {
                 _textureCreator ??= new ECGTextureCreator(_maxSampleBuffer, _ecgMaterial);
