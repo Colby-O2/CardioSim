@@ -1307,7 +1307,6 @@ MonoBehaviour:
   _as: {fileID: 418641993}
   _ecgBeepClip: {fileID: 8300000, guid: bd3c278b6e2141148bbc4712eccac0a3, type: 3}
   _flatlineClip: {fileID: 8300000, guid: 410cdc719ea3a324293e121cb94de645, type: 3}
-  _isArrested: 0
 --- !u!114 &418641995
 MonoBehaviour:
   m_ObjectHideFlags: 0
