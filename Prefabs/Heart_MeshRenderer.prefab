@@ -129,8 +129,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4685310378784994562}
   - component: {fileID: 5966510026309036589}
-  - component: {fileID: 2817944590929702504}
   - component: {fileID: 6595187470232382672}
+  - component: {fileID: 2817944590929702504}
   m_Layer: 0
   m_Name: Heart
   m_TagString: Untagged
@@ -185,7 +185,38 @@ MonoBehaviour:
   _as: {fileID: 2817944590929702504}
   _ecgBeepClip: {fileID: 8300000, guid: bd3c278b6e2141148bbc4712eccac0a3, type: 3}
   _flatlineClip: {fileID: 8300000, guid: 410cdc719ea3a324293e121cb94de645, type: 3}
-  _isArrested: 0
+--- !u!114 &6595187470232382672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8615978468888331321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa189657e846cd6459e6e9166f455530, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _heart: {fileID: 5966510026309036589}
+  _displayMode: 1
+  _maxSampleBuffer: 2048
+  _secondsToDisplay: 2
+  _yScale: 0.5
+  _totalWidth: 2
+  _leadLength: 5
+  _persistence: 0.9822
+  _traceColor: {r: 0, g: 8, b: 0, a: 1}
+  _flashColor: {r: 40, g: 40, b: 40, a: 10}
+  _lineWidth: 0.00768
+  _backgroundColor: {r: 0, g: 0, b: 0, a: 1}
+  _enableGrid: 1
+  _gridColor: {r: 0.015686275, g: 0.2627451, b: 0.015686275, a: 1}
+  _gridSize: 28
+  _gridLineThickness: 0.1
+  _enableGridFadeOut: 1
+  _meshRenderer: {fileID: 5724643587669887719}
+  _ecgMaterial: {fileID: 2100000, guid: 88cbd5ee2042a024e90f1e231f9e218b, type: 2}
+  _rendererComponent: {fileID: 0}
 --- !u!82 &2817944590929702504
 AudioSource:
   m_ObjectHideFlags: 0
@@ -283,35 +314,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &6595187470232382672
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8615978468888331321}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa189657e846cd6459e6e9166f455530, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _heart: {fileID: 5966510026309036589}
-  _displayMode: 1
-  _maxSampleBuffer: 2048
-  _secondsToDisplay: 2
-  _yScale: 0.5
-  _totalWidth: 2
-  _leadLength: 5
-  _persistence: 0.9822
-  _traceColor: {r: 0, g: 8, b: 0, a: 1}
-  _flashColor: {r: 40, g: 40, b: 40, a: 10}
-  _lineWidth: 0.00768
-  _backgroundColor: {r: 0, g: 0, b: 0, a: 1}
-  _enableGrid: 1
-  _gridColor: {r: 0.015686275, g: 0.2627451, b: 0.015686275, a: 1}
-  _gridSize: 28
-  _gridLineThickness: 0.1
-  _enableGridFadeOut: 1
-  _meshRenderer: {fileID: 5724643587669887719}
-  _ecgMaterial: {fileID: 2100000, guid: 88cbd5ee2042a024e90f1e231f9e218b, type: 2}
-  _rendererComponent: {fileID: 0}

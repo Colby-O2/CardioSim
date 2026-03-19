@@ -219,16 +219,15 @@ namespace ColbyO.CardioSim.Rendering
             for (int f = 1; f <= fadeLength; f++)
             {
                 int idx = (i - f + _sampleCount) % _sampleCount;
-                float alpha = Mathf.Clamp01(1f - (float)f / fadeLength);
 
                 int vBase = idx * 4;
                 for (int v = 0; v < 4; v++)
-                    _colors[vBase + v] = new Color(_traceColor.r, _traceColor.g, _traceColor.b, alpha);
+                    _colors[vBase + v] = new Color(_traceColor.r, _traceColor.g, _traceColor.b, 1f);
             }
 
             for (int v = 0; v < _colors.Length; v++)
             {
-                _colors[v] = Color.Lerp(_colors[v], Color.black, 1.0f - _persistence);
+                _colors[v].a = Mathf.Lerp(_colors[v].a, 0f, 1.0f - _persistence);
             }
 
             for (int l = 0; l < _leadLength; l++)
